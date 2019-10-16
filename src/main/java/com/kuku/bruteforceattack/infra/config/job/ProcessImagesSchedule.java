@@ -40,8 +40,9 @@ public class ProcessImagesSchedule {
         try {
             log.debug("job starting");
             List<HostInfo> hostInfos = Arrays.asList(
-                    new HostInfo("anh4.com", "https://anh4.com/images/"),
-                    new HostInfo("greenupload.com", "https://greenupload.com/images/"));
+                    new HostInfo("greenupload.com", "https://greenupload.com/images/"),
+                    new HostInfo("anh4.com", "https://anh4.com/images/")
+            );
 
             LocalDate localDate = LocalDate.of(2019, 4, 17);
             LocalDate endWhen = LocalDate.now();
