@@ -13,7 +13,7 @@ public class ThreadConfig {
     @Bean
     public ThreadPoolTaskExecutor getAsyncExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setCorePoolSize(10);
+        executor.setCorePoolSize(50);
         executor.setMaxPoolSize(150);
         executor.setQueueCapacity(Integer.MAX_VALUE);
         executor.setThreadNamePrefix("kukukaka-");

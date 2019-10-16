@@ -24,11 +24,11 @@ spring:
 jdbc:
   clearall: true
   dbhost: localhost:3306
-  dbname: xxxx
-  username: root
-  password: root
+  dbname: phptestperform
+  username: testperform
+  password: testperformxx1122#+
   poolSize:
-    normal: 20
+    normal: 500
     bulk: 1
 
 log4j:
@@ -41,7 +41,7 @@ logging:
   level:
     ROOT: INFO
     com:
-      avn: TRACE
+      kuku: TRACE
   file:
     max-history: 5
     max-size: 10MB
