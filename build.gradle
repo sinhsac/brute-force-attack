@@ -45,3 +45,17 @@ asciidoctor {
 	inputs.dir snippetsDir
 	dependsOn test
 }
+
+release {
+	revertOnFail = true
+	preCommitText = ''
+	tagTemplate = 'Kuku${version}'
+	preTagCommitMessage = '[KUKU] - pre tag commit: '
+	tagCommitMessage = '[KUKU] - creating tag: '
+	newVersionCommitMessage = '[KUKU] - new version commit: '
+	versionPropertyFile = 'gradle.properties'
+	git {
+		requireBranch = 'master'
+		pushToRemote = 'origin'
+	}
+}
