@@ -49,7 +49,7 @@ asciidoctor {
 release {
 	revertOnFail = true
 	preCommitText = ''
-	tagTemplate = 'Kuku${version}'
+	tagTemplate = 'Kuku-${version}'
 	preTagCommitMessage = '[KUKU] - pre tag commit: '
 	tagCommitMessage = '[KUKU] - creating tag: '
 	newVersionCommitMessage = '[KUKU] - new version commit: '
@@ -59,3 +59,5 @@ release {
 		pushToRemote = 'origin'
 	}
 }
+
+afterReleaseBuild.dependsOn uploadArchives
