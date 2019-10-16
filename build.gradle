@@ -55,6 +55,7 @@ release {
 	tagCommitMessage = '[KUKU] - creating tag: '
 	newVersionCommitMessage = '[KUKU] - new version commit: '
 	versionPropertyFile = 'gradle.properties'
+	uploadArchives = true
 	git {
 		requireBranch = 'master'
 		pushToRemote = 'origin'
