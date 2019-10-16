@@ -8,7 +8,7 @@ plugins {
 
 group = 'com.kuku'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '8'
 
 configurations {
 	developmentOnly
