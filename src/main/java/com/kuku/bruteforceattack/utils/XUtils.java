@@ -1,10 +1,15 @@
 package com.kuku.bruteforceattack.utils;
 
+import com.kuku.bruteforceattack.infra.config.job.ProcessImagesSchedule;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class XUtils {
+    private static Logger log = LogManager.getLogger(XUtils.class);
     public static int getResponseCode(String urlString) {
         try {
             HttpURLConnection huc = initRequestInfo(urlString);
@@ -20,7 +25,8 @@ public class XUtils {
             HttpURLConnection huc = initRequestInfo(urlString);
             huc.connect();
             return (huc.getResponseCode() == 200);
-        } catch (Exception ignore) {
+        } catch (Exception ex) {
+            log.error("has error when check status", ex);
             return false;
         }
     }
