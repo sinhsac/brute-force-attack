@@ -1,0 +1,48 @@
+module:
+  name: kaka-kuku
+
+server:
+  port: 1900
+  servlet:
+    context-path: /
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 30MB
+  profiles.active: dev
+  banner:
+    location: banner.txt
+  jpa:
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: false
+
+jdbc:
+  clearall: true
+  dbhost: localhost:3306
+  dbname: xxxx
+  username: root
+  password: root
+  poolSize:
+    normal: 20
+    bulk: 1
+
+log4j:
+  appender:
+    FILE:
+      encoding: UTF-8
+  rootLogger: INFO, file, stdout
+
+logging:
+  level:
+    ROOT: INFO
+    com:
+      avn: TRACE
+  file:
+    max-history: 5
+    max-size: 10MB
+  path: logs
