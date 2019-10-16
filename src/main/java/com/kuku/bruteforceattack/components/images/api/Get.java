@@ -24,7 +24,7 @@ public class Get {
                                  @RequestParam(name = "size", defaultValue = "10") Integer size,
                                  @RequestParam(name = "q", defaultValue = "") String searchQuery) {
         PageInfo pageInfo = new PageInfo(page, size, searchQuery);
-        Page<Image> images = imageRepo.findAll(pageInfo.toPageRequest(Sort.by("").descending()));
+        Page<Image> images = imageRepo.findAll(pageInfo.toPageRequest(Sort.by("createdAt").descending()));
         return images.getContent();
     }
 }

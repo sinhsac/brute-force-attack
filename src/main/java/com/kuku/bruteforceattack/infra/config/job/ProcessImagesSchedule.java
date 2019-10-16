@@ -46,6 +46,7 @@ public class ProcessImagesSchedule {
             LocalDate localDate = LocalDate.of(2019, 4, 17);
             LocalDate endWhen = LocalDate.now();
             for (HostInfo hostInfo : hostInfos) {
+                log.debug("process for {}", hostInfo.domain);
                 processForOnlyHost(hostInfo, localDate, endWhen);
             }
         } catch (Exception ex) {
